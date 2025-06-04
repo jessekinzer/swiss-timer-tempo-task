@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import { Play, Stop, Timer as TimerIcon } from 'lucide-react';
+import { Play, Square, Timer as TimerIcon } from 'lucide-react';
 import TaskInput from './TaskInput';
 import TimeInput from './TimeInput';
 
@@ -125,7 +125,7 @@ const Timer: React.FC = () => {
                 variant="outline"
                 className="border-gray-300 text-gray-600 hover:border-red-500 hover:text-red-500 px-8 py-3 font-swiss tracking-wide"
               >
-                <Stop className="h-4 w-4 mr-2" />
+                <Square className="h-4 w-4 mr-2" />
                 Stop
               </Button>
             </div>
