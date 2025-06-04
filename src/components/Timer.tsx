@@ -83,17 +83,17 @@ const Timer: React.FC = () => {
         {/* Main Timer Display */}
         {(isRunning || timeLeft > 0) && (
           <div className="text-center mb-16">
-            <div className="mb-4">
-              <h2 className="text-lg font-swiss font-medium text-gray-600 mb-2">
+            <div className="mb-8">
+              <h2 className="text-lg font-swiss font-medium text-gray-600 mb-8">
                 {taskName || 'Untitled Task'}
               </h2>
-              <div className="font-mono text-8xl font-light tracking-tight">
+              <div className="font-mono text-[12rem] md:text-[16rem] font-extralight tracking-tighter leading-none">
                 {formatTime(timeLeft)}
               </div>
             </div>
             
             {/* Progress Bar */}
-            <div className="w-full bg-gray-200 h-1 rounded-full mb-6">
+            <div className="w-full bg-gray-200 h-1 rounded-full mb-8">
               <div 
                 className="bg-black h-1 rounded-full transition-all duration-1000 ease-linear"
                 style={{ width: `${progress}%` }}
@@ -135,7 +135,7 @@ const Timer: React.FC = () => {
         {/* Completion State */}
         {isCompleted && (
           <div className="text-center mb-16 animate-pulse-subtle">
-            <div className="font-mono text-6xl font-light mb-4">00:00</div>
+            <div className="font-mono text-[12rem] md:text-[16rem] font-extralight mb-8 tracking-tighter leading-none">00:00</div>
             <p className="text-lg font-swiss text-green-600 mb-6">Task Completed!</p>
             <Button
               onClick={handleStop}
